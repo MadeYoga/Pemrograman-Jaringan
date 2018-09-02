@@ -79,6 +79,10 @@ def isIpValid(ip_addr):
         ip_numbers = ip.split(".")
         ips = []
         for ip_number in ip_numbers:
+            try:
+                int(ip_number)
+            except:
+                return False
             ## CHECK ALPHABET
             if re.search(r'[a-zA-Z]', ip_number):
                 valid=False
@@ -103,9 +107,18 @@ def isIpValid(ip_addr):
         return False
 
 def isSubnetValid(subnet_mask):
+    if re.search(r'[a-zA-Z]', subnet_mask):
+        return False
+    if subnet_mask.count('.') > 3 or subnet_mask.count('.') < 3:
+        return False
+    subnet_mask.replace(" ", "")
     numbers = subnet_mask.split('.')
     binary = ""
     for number in numbers:
+        try:
+            int(number)
+        except:
+            return False
         if int(number) > 255 or int(number) < 0:
             return False
         if re.search(r"[a-zA-Z]", number):
