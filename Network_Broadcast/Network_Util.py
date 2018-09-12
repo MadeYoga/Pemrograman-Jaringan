@@ -17,8 +17,14 @@ def get_broadcast_address(ip_address, subnet_mask):
 
     ## REPLACE LAST N(SUBNET ZERO COUNT) DIGIT TO 1
     bin_list = list(bin_ip_addr)
+<<<<<<< HEAD
     for i in range (len(bin_ip_addr) - subnet_zero_count, len(bin_ip_addr)):
         bin_list[i] = '1'
+=======
+    for i in range (len(bin_ip_addr)): ## better way: len(len(bin_ip_addr) - subnet_zero_count)
+        if i >= len(bin_ip_addr) - subnet_zero_count:
+            bin_list[i] = '1'
+>>>>>>> eb7eb8d03e1e5f5a7eca05f5bb98881ebe0b0b92
 
     ## PUT ON RESULTS TEMP VAR
     bin_broadcast_address = ""
@@ -48,7 +54,7 @@ def get_network_address(ip_address, subnet_mask):
     
     ## REPLACE LAST N(SUBNET ZERO COUNT) DIGIT TO 1
     bin_list = list(bin_ip_addr)
-    for i in range (len(bin_ip_addr)):
+    for i in range (len(bin_ip_addr)): ## better way: len(len(bin_ip_addr) - subnet_zero_count)
         if i >= len(bin_ip_addr) - subnet_zero_count:
             bin_list[i] = '0'
 
