@@ -1,7 +1,6 @@
 ## INPUT IP ADDRESS & SUBNET MASK ##
 ## OUTPUT NETWORK & BROADCAST ADDRESS
 
-from Network_Util import get_broadcast_address, get_network_address, isIpValid, isSubnetValid
 from NetworkUtil import NetworkUtility
 
 network = NetworkUtility()
