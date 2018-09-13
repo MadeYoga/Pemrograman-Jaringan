@@ -1,9 +1,14 @@
 import socket
 import threading
+from threading import Thread
 
-def handler_connection(server_socket):
-    request = server_socket.recv(1024)
-    print(request.encode())
+import asyncio
+import time 
+def connection_handler(server_socket):
+    print("aaab")
+    while True:
+        response = server_socket.recv(1024)
+        print("\nanon: " + str(response)[2:-1])
 
 s = socket.socket()
 host = socket.gethostname()
@@ -11,11 +16,10 @@ port = 16083
 
 s.connect((host, port))
 
-# print(s.recv(1024))
+Thread(target=connection_handler, args=(s,)).start()
+
 while True:
     msg = input("send: ")
-    s.send(msg.encode())
-
-    print(str(s.recv(1024)))
+    s.sendall(msg.encode())
 
 s.close()
