@@ -2,8 +2,6 @@ import socket
 import threading
 from threading import Thread
 
-import asyncio
-import time 
 def connection_handler(server_socket):
     print("aaab")
     while True:

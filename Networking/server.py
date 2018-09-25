@@ -49,17 +49,17 @@ if __name__ == "__main__":
    #except KeyboardInterrupt:
    #   loop.close()
 
-async def handle_client(client):
-   #if not clients[client]:
-   if not clients[client]:
-      clients[client] = "anon"
-   while True:
-      msg = client.recv(1024)
-      broadcast(msg)
+# async def handle_client(client):
+#    #if not clients[client]:
+#    if not clients[client]:
+#       clients[client] = "anon"
+#    while True:
+#       msg = client.recv(1024)
+#       broadcast(msg)
 
-async def run_server():
-   while True:
-      client, client_address = s.accept()
-      print(str(client_address) + " has connected to server")
-      addresses[client] = client_address
-      loop.create_task(handle_client(client))
+# async def run_server():
+#    while True:
+#       client, client_address = s.accept()
+#       print(str(client_address) + " has connected to server")
+#       addresses[client] = client_address
+#       loop.create_task(handle_client(client))
