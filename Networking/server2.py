@@ -20,6 +20,7 @@ def handle_client_messsage(client, client_address):
     while True:
         try:
             message_from_client = client.recv(1024)
+            print(message_from_client)
         except:
             print(clients[client][0] + " has disconnected")
             clients.pop(client)

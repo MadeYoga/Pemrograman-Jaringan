@@ -12,7 +12,6 @@ def dot_valid(dot_count):
 #    except:
 #        return False
 
-#print(str(int("005")))
 ip_addr = input ("input ip address: ")
 
 # CHECK JUMLAH .
@@ -59,6 +58,8 @@ if valid:
     elif ip_numbers[0] == "172" or ip_numbers[0] == "168":
         if ( int(ip_numbers[1]) <= 31 and int(ip_numbers[1]) >= 16 ):
             print("PRIVATE IP ADDRESS")
+        else:
+            print("PUBLIC IP ADDRESS")
     else:
         print("PUBLIC IP ADDRESS")
 else:
