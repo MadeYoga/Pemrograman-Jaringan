@@ -18,6 +18,18 @@ class NetworkUtility:
             usable_address *= 2
         return usable_address - 2
 
+    def get_slash_by_subnet(self, subnet):
+        if not self.isSubnetValid(subnet):
+            return False
+        bin_mask = ""
+        numbers = subnet.split(".")
+        for number in numbers:
+            bin_mask += bin(int(number))[2:].zfill(8)
+        print(bin_mask)
+        count_one = bin_mask.count("1")
+        print("slash -> {}".format(count_one))
+        return count_one
+
     def get_broadcast_address(self, ip_address, subnet_mask):
 
         ## CONVERTS SUBNET TO BINARY
