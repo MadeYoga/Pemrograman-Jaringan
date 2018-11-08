@@ -1,0 +1,23 @@
+Music Command:<br>
+.s -> youtube search, search result will be stored into playlist<br>
+.p (number) -> picks entry from playlist (number: index in playlist)<br>
+.playlist -> shows available entries<br>
+.volume (number) -> set volume (number: 0 - 100)<br>
+.play (search_key/youtube_link) <br>
+.summon -> summon to voice channel<br>
+.stop -> stop playing song, and leave voice channel<br>
+.pause -> pause currently playing song<br>
+.resume -> resume currently paused song<br>
+.skip -> votes to skipp currently played song, requester can immediately skip current song<br>
+<br>
+image Command:<br>
+(9gag's section)<br>
+.anime<br>
+.comic<br>
+.savage<br>
+.wtf<br>
+.kpop<br>
+.cosplay<br>
+<br>
+(giphy)<br>
+.gif (tag_name)<br>
