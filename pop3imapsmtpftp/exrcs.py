@@ -11,7 +11,7 @@ except Exception as e:
     print(e)
     if "[Errno 11001]" in str(e):
         print("Host not found")
-        quit() ## quit early
+        # quit() ## quit early
     else:
         print("POP3 disabled")
 
