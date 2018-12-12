@@ -9,7 +9,8 @@ try:
 except Exception as e:
         print(e)
 
-vars = netsnmp.VarList(netsnmp.Varbind('iso.3.6.1.2.1.2.2.1.2'))
+# vars = netsnmp.VarList(netsnmp.Varbind('iso.3.6.1.2.1.2.2.1.2'))
+vars = netsnmp.VarList(netsnmp.Varbind('1.3.6.1.2.1.17.7.1.2.2.1.2'))
 a = sess.walk(vars)
 print(a)
 now = sess.get(vars)[0]
