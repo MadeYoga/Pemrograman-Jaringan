@@ -2,8 +2,6 @@
 
 import cgi, cgitb 
 
-from NetworkUtil import NetworkUtility
-
 # Create instance of FieldStorage 
 form = cgi.FieldStorage() 
 
